@@ -1,0 +1,15 @@
+{% extends 'Inv/base.html' %}
+{% load static %}
+
+{% block content %}
+<form method="POST" action="">
+    {% csrf_token %}
+    <div>
+        {{ form.as_p }}
+    </div>
+    <input class="btn btn-outline-success btn-sm btn-block" type="submit" name="submit">
+    <a class="btn btn-outline-warning btn-sm btn-block" href="{% url 'Home' %}">Cancel</a>
+
+</form>
+
+{% endblock %}
