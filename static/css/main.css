@@ -1,0 +1,40 @@
+/* #logo {
+
+} */
+
+body{
+    background-color: #ebeff5;
+    
+}
+
+#total-order{
+    background-color: #4cb4c7;
+}
+
+#orders-delivered{
+    background-color: #7abecc;
+}
+
+#orders-pending{
+    background-color: #7CD1C0;
+}
+.JGDX{
+    background: gray;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+

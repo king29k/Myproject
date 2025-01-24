@@ -1,0 +1,60 @@
+{% extends 'Inv/base.html' %}
+
+{% block content %}
+{% include 'Inv/status.html' %}
+
+<div class="row">
+    <div class="col-md-5">
+        <h5 class="text-dark">CUSTOMERS:</h5>
+        <hr>
+        <div class="card card-body">
+            <a class="btn btn-primary btn-sm btn-block" href="{% url 'Create_customer' %}">Create Customer</a>
+            <table class="table table-sm table-striped">
+                <tr>
+                    <th></th>
+                    <th>Customer</th>
+                    <th>Phone</th>
+                </tr>
+                {% for customer in customer %}
+                <tr>
+                    <td><a class="btn btn-sm btn-info" href="{% url 'Customer' customer.id %}">View</a></td>
+                    <td>{{customer.name}}</td>
+                    <td>{{customer.phone}}</td>
+                </tr>
+
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+    <div class="col-md-7">
+        <h5 class="text-dark">LAST 5 ORDERS</h5>
+        <hr>
+        <div class="card card-body">
+            <a class="btn btn-primary  btn-sm btn-block" href="{% url 'Create_order' %}">Create Order</a>
+            <table class="table tale-sm table-striped">
+                <tr>
+                    <th>Product Name</th>
+                    <th> Ordered Date</th>
+                    <th>Status</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                {% for order in order %}
+                <tr>
+                    <td>{{order.product}}</td>
+                    <td>{{order.date_created}}</td>
+                    <td>{{order.status}}</td>
+                    <td><a class="btn btn-sm btn-success" href="{% url 'Update_order' order.id %}">Update</a></td>
+                    <td><a class="btn btn-sm btn-danger" href="{% url 'Delete_order' order.id %}" >Delete</a></td>
+
+                </tr>
+
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
