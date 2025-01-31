@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1738156359 source:c:\users\king\documents\keyce_b2a\perso\productmanagement\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"produits.h"
+	"statistiques.h"
+
+1738155689 c:\users\king\documents\keyce_b2a\perso\productmanagement\produits.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1738155869 c:\users\king\documents\keyce_b2a\perso\productmanagement\statistiques.h
+
+1738157699 source:c:\users\king\documents\keyce_b2a\perso\productmanagement\statistique.c
+	"statistiques.h"
+	"produits.h"
+
+1738156359 source:c:\users\king\documents\keyce_b2a\perso\productmanagement\produits.c
+	"produits.h"
+
